@@ -18,6 +18,6 @@
     <module>dht</module>
     <module>shell</module>
     <module>shell-data-interface</module>
-    <module>shell-web</module>
+    <module>shell-connector</module>
   </modules>
 </project>
