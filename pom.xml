@@ -4,7 +4,7 @@
 
   <groupId>org.sanket.p2pdataprocessingnetwork</groupId>
   <artifactId>p2pdataprocessingnetwork</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
   <name>p2pdataprocessingnetwork</name>
@@ -12,12 +12,13 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <p2pdataprocessingnetwork.version>1.0.0</p2pdataprocessingnetwork.version>
   </properties>
   <modules>
     <module>commons</module>
     <module>dht</module>
-    <module>shell</module>
     <module>shell-data-interface</module>
     <module>shell-connector</module>
+    <module>shell</module>
   </modules>
 </project>

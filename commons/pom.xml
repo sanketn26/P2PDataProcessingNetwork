@@ -5,11 +5,11 @@
   <parent>
     <groupId>org.sanket.p2pdataprocessingnetwork</groupId>
     <artifactId>p2pdataprocessingnetwork</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <groupId>org.sanket.p2pdataprocessingnetwork</groupId>
   <artifactId>commons</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>${p2pdataprocessingnetwork.version</version>
   <packaging>jar</packaging>
   <name>commons</name>
   <url>http://maven.apache.org</url>
