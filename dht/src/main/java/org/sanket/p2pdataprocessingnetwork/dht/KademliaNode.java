@@ -1,5 +1,17 @@
 package org.sanket.p2pdataprocessingnetwork.dht;
 
+import org.sanket.p2pdataprocessingnetwork.dht.exceptions.ContentNotFoundException;
+import org.sanket.p2pdataprocessingnetwork.dht.exceptions.RoutingException;
+import org.sanket.p2pdataprocessingnetwork.dht.hashtable.GetParameter;
+import org.sanket.p2pdataprocessingnetwork.dht.hashtable.JKademliaStorageEntry;
+import org.sanket.p2pdataprocessingnetwork.dht.hashtable.KadContent;
+import org.sanket.p2pdataprocessingnetwork.dht.hashtable.KademliaDHT;
+import org.sanket.p2pdataprocessingnetwork.dht.node.Node;
+import org.sanket.p2pdataprocessingnetwork.dht.routing.KademliaRoutingTable;
+
+import java.io.IOException;
+import java.util.NoSuchElementException;
+
 /**
  *
  */
@@ -88,7 +100,7 @@ public interface KademliaNode {
      * @return DHTContent The content
      *
      * @throws java.io.IOException
-     * @throws kademlia.exceptions.ContentNotFoundException
+     * @throws ContentNotFoundException
      */
     public JKademliaStorageEntry get(GetParameter param) throws NoSuchElementException, IOException, ContentNotFoundException;
 
