@@ -16,4 +16,6 @@ public interface KadServer {
     void startSeerver();
 
     void shutdownServer();
+
+    boolean isRunning();
 }

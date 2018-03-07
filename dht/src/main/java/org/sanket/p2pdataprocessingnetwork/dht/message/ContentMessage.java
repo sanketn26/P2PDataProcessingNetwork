@@ -1,5 +1,9 @@
 package org.sanket.p2pdataprocessingnetwork.dht.message;
 
+import org.sanket.p2pdataprocessingnetwork.dht.hashtable.KademliaStorageEntry;
+import org.sanket.p2pdataprocessingnetwork.dht.node.Node;
+import org.sanket.p2pdataprocessingnetwork.dht.util.serializer.JsonSerializer;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -15,7 +19,7 @@ public class ContentMessage implements Message
 
     public static final byte CODE = 0x04;
 
-    private JKademliaStorageEntry content;
+    private KademliaStorageEntry content;
     private Node origin;
 
     /**
@@ -23,7 +27,7 @@ public class ContentMessage implements Message
      * @param content The content to be stored
      *
      */
-    public ContentMessage(Node origin, JKademliaStorageEntry content)
+    public ContentMessage(Node origin, KademliaStorageEntry content)
     {
         this.content = content;
         this.origin = origin;
@@ -40,7 +44,7 @@ public class ContentMessage implements Message
         this.origin.toStream(out);
 
         /* Serialize the KadContent, then send it to the stream */
-        new JsonSerializer<JKademliaStorageEntry>().write(content, out);
+        new JsonSerializer<KademliaStorageEntry>().write(content, out);
     }
 
     @Override
@@ -50,7 +54,7 @@ public class ContentMessage implements Message
 
         try
         {
-            this.content = new JsonSerializer<JKademliaStorageEntry>().read(in);
+            this.content = new JsonSerializer<KademliaStorageEntry>().read(in);
         }
         catch (ClassNotFoundException e)
         {
@@ -63,7 +67,7 @@ public class ContentMessage implements Message
         return this.origin;
     }
 
-    public JKademliaStorageEntry getContent()
+    public KademliaStorageEntry getContent()
     {
         return this.content;
     }

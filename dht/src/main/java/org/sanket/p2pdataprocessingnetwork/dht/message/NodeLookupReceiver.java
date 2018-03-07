@@ -1,8 +1,12 @@
 package org.sanket.p2pdataprocessingnetwork.dht.message;
 
+import org.sanket.p2pdataprocessingnetwork.dht.KadConfiguration;
+import org.sanket.p2pdataprocessingnetwork.dht.KadServer;
 import org.sanket.p2pdataprocessingnetwork.dht.KademliaNode;
+import org.sanket.p2pdataprocessingnetwork.dht.node.Node;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Receives a NodeLookupMessage and sends a NodeReplyMessage as reply with the K-Closest nodes to the ID sent.

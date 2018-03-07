@@ -130,7 +130,7 @@ public class DHT implements KademliaDHT
     }
 
     @Override
-    public JKademliaStorageEntry retrieve(KademliaId key, int hashCode) throws FileNotFoundException, IOException, ClassNotFoundException
+    public JKademliaStorageEntry retrieve(KademliaId key, int hashCode) throws IOException, ClassNotFoundException
     {
         String folder = this.getContentStorageFolderName(key);
         DataInputStream din = new DataInputStream(new FileInputStream(folder + File.separator + hashCode + ".kct"));

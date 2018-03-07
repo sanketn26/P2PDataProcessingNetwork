@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
-import org.sanket.p2pdataprocessingnetwork.dht.JKademliaNode;
+import org.sanket.p2pdataprocessingnetwork.dht.KademliaNode;
 import org.sanket.p2pdataprocessingnetwork.dht.hashtable.GetParameter;
 import org.sanket.p2pdataprocessingnetwork.dht.KadConfiguration;
 import org.sanket.p2pdataprocessingnetwork.dht.KadServer;
@@ -43,8 +43,8 @@ public class ContentLookupOperation implements Operation, Receiver
     private static final Byte FAILED = (byte) 0x03;
 
     private final KadServer server;
-    private final JKademliaNode localNode;
-    private JKademliaStorageEntry contentFound = null;
+    private final KademliaNode localNode;
+    private KademliaStorageEntry contentFound = null;
     private final KadConfiguration config;
 
     private final ContentLookupMessage lookupMessage;
@@ -74,7 +74,7 @@ public class ContentLookupOperation implements Operation, Receiver
      * @param params    The parameters to search for the content which we need to find
      * @param config
      */
-    public ContentLookupOperation(KadServer server, JKademliaNode localNode, GetParameter params, KadConfiguration config)
+    public ContentLookupOperation(KadServer server, KademliaNode localNode, GetParameter params, KadConfiguration config)
     {
         /* Construct our lookup message */
         this.lookupMessage = new ContentLookupMessage(localNode.getNode(), params);
@@ -254,7 +254,7 @@ public class ContentLookupOperation implements Operation, Receiver
             this.localNode.getRoutingTable().insert(msg.getOrigin());
 
             /* Get the Content and check if it satisfies the required parameters */
-            JKademliaStorageEntry content = msg.getContent();
+            KademliaStorageEntry content = msg.getContent();
             this.contentFound = content;
             this.isContentFound = true;
         }
@@ -321,7 +321,7 @@ public class ContentLookupOperation implements Operation, Receiver
      *
      * @throws ContentNotFoundException
      */
-    public JKademliaStorageEntry getContentFound() throws ContentNotFoundException
+    public KademliaStorageEntry getContentFound() throws ContentNotFoundException
     {
         if (this.isContentFound)
         {

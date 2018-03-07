@@ -1,6 +1,10 @@
 package org.sanket.p2pdataprocessingnetwork.dht.message;
 
+import org.sanket.p2pdataprocessingnetwork.dht.node.KademliaId;
+import org.sanket.p2pdataprocessingnetwork.dht.node.Node;
+
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 
 /**

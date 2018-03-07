@@ -1,5 +1,7 @@
 package org.sanket.p2pdataprocessingnetwork.dht.message;
 
+import org.sanket.p2pdataprocessingnetwork.dht.KadServer;
+
 import java.io.DataInputStream;
 import java.io.IOException;
 
