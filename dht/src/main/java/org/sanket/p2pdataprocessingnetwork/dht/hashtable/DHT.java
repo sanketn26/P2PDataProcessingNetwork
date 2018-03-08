@@ -57,7 +57,6 @@ public class DHT implements KademliaDHT
         {
             serializer = new JsonSerializer<>();
         }
-
         return serializer;
     }
 

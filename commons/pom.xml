@@ -7,9 +7,9 @@
     <artifactId>p2pdataprocessingnetwork</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>org.sanket.p2pdataprocessingnetwork</groupId>
+  <groupId>org.sanket.p2pdataprocessingnetwork.common</groupId>
   <artifactId>commons</artifactId>
-  <version>${p2pdataprocessingnetwork.version</version>
+  <version>${p2pdataprocessingnetwork.version}</version>
   <packaging>jar</packaging>
   <name>commons</name>
   <url>http://maven.apache.org</url>

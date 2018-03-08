@@ -2,10 +2,7 @@ package org.sanket.p2pdataprocessingnetwork.dht;
 
 import org.sanket.p2pdataprocessingnetwork.dht.exceptions.ContentNotFoundException;
 import org.sanket.p2pdataprocessingnetwork.dht.exceptions.RoutingException;
-import org.sanket.p2pdataprocessingnetwork.dht.hashtable.GetParameter;
-import org.sanket.p2pdataprocessingnetwork.dht.hashtable.JKademliaStorageEntry;
-import org.sanket.p2pdataprocessingnetwork.dht.hashtable.KadContent;
-import org.sanket.p2pdataprocessingnetwork.dht.hashtable.KademliaDHT;
+import org.sanket.p2pdataprocessingnetwork.dht.hashtable.*;
 import org.sanket.p2pdataprocessingnetwork.dht.node.Node;
 import org.sanket.p2pdataprocessingnetwork.dht.routing.KademliaRoutingTable;
 
@@ -81,7 +78,7 @@ public interface KademliaNode {
      * @throws java.io.IOException
      *
      */
-    public int put(JKademliaStorageEntry entry) throws IOException;
+    public int put(KademliaStorageEntry entry) throws IOException;
 
     /**
      * Store a content on the local node's DHT
@@ -102,7 +99,7 @@ public interface KademliaNode {
      * @throws java.io.IOException
      * @throws ContentNotFoundException
      */
-    public JKademliaStorageEntry get(GetParameter param) throws NoSuchElementException, IOException, ContentNotFoundException;
+    public KademliaStorageEntry get(GetParameter param) throws NoSuchElementException, IOException, ContentNotFoundException;
 
     /**
      * Allow the user of the System to call refresh even out of the normal Kad refresh timing

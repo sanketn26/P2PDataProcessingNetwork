@@ -22,7 +22,6 @@ class StoredContentManager
 
     private final Map<KademliaId, List<KademliaStorageEntryMetadata>> entries;
 
-
     {
         entries = new HashMap<>();
     }

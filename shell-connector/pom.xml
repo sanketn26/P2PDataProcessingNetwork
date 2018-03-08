@@ -7,7 +7,7 @@
     <artifactId>p2pdataprocessingnetwork</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>org.sanket.p2pdataprocessingnetwork</groupId>
+  <groupId>org.sanket.p2pdataprocessingnetwork.connector</groupId>
   <artifactId>shell-connector</artifactId>
   <version>${p2pdataprocessingnetwork.version}</version>
   <packaging>jar</packaging>
@@ -17,6 +17,16 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>${netty.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.sanket.p2pdataprocessingnetwork.common</groupId>
+      <artifactId>commons</artifactId>
+      <version>${p2pdataprocessingnetwork.version}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
