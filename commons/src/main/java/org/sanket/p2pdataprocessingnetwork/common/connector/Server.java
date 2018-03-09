@@ -8,7 +8,7 @@ public interface Server {
     /**
      * Starts the Server
      */
-    void startServer();
+    void startServer() throws InterruptedException, Exception;
 
     /**
      * Shutsdown the Server
